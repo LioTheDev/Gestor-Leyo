@@ -1,0 +1,101 @@
+<link rel="stylesheet" href="style.css" />
+
+
+<div id="loginSection">
+    <h2 class="titulo-login">Inicio de Sesión</h2>
+    <h3 class="Descripción">
+        Bienvenido al gestor de leyo<h3>
+            <input type="text" id="username" placeholder="Usuario">
+            <input type="password" id="password" placeholder="Contraseña">
+            <button onclick="login()">Entrar</button>
+            <p id="loginError" class="error"></p>
+</div>
+
+<div id="appSection" style="display:none;">
+    <h2>Bienvenido: <span id="displayUser"></span></h2>
+
+
+    <div>
+        <h3>Registrar nueva tarea</h3>
+        <form id="taskForm" onsubmit="return addTask()">
+            <input type="text" id="taskId" placeholder="ID de tarea" required>
+            <input type="text" id="taskTitle" placeholder="Título" required>
+            <input type="text" id="taskDesc" placeholder="Descripción" required>
+            <input type="date" id="taskStartDate" required>
+            <input type="text" id="clientName" placeholder="Cliente" required>
+            <input type="text" id="projectId" placeholder="ID del proyecto" required>
+            <textarea id="taskComments" placeholder="Comentarios..."></textarea>
+            <input type="text" id="taskStatus" value="Por hacer" readonly>
+            <button type="submit">Agregar Tarea</button>
+        </form>
+    </div>
+
+
+    <h3>Tareas Registradas</h3>
+    <table border="1" id="taskTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Descripción</th>
+                <th>Fecha</th>
+                <th>Cliente</th>
+                <th>ID Proyecto</th>
+                <th>Comentarios</th>
+                <th>Estatus</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+
+
+<div id="editSection" style="display:none; margin-top:40px;">
+    <h3>Detalle de tarea seleccionada</h3>
+
+    <label>ID: <span id="editId"></span></label><br>
+    <label>Título: <span id="editTitle"></span></label><br>
+    <label>Descripción: <span id="editDesc"></span></label><br>
+    <label>Fecha inicio: <span id="editDate"></span></label><br>
+    <label>Cliente: <span id="editClient"></span></label><br>
+    <label>ID Proyecto: <span id="editProject"></span></label><br>
+
+
+    <label>
+        Estatus:
+        <select id="editStatus">
+            <option>Por hacer</option>
+            <option>En progreso</option>
+            <option>Rechazado</option>
+            <option>Cancelado</option>
+            <option>Cerrado</option>
+            <option>En pruebas de calidad</option>
+            <option>En validación por el usuario</option>
+            <option>En proceso de liberación</option>
+        </select>
+    </label><br>
+
+ 
+    <textarea id="newComment" placeholder="Añadir comentario…"></textarea><br>
+
+    <button id="updateBtn">Actualizar tarea</button>
+</div>
+
+
+<div style="max-width:500px; margin:auto; margin-top:20px;">
+    <label>
+        Filtrar por estatus:
+        <select id="filterStatus" onchange="applyFilter()">
+            <option>Todos</option>
+            <option>Por hacer</option>
+            <option>En progreso</option>
+            <option>Rechazado</option>
+            <option>Cancelado</option>
+            <option>Cerrado</option>
+            <option>En pruebas de calidad</option>
+            <option>En validación por el usuario</option>
+        </select>
+    </label>
+</div>

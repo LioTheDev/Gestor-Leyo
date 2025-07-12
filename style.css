@@ -1,0 +1,84 @@
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(to right, #000000, #910303);
+    color: #fff;
+    padding: 30px;
+}
+
+
+#loginSection, #appSection {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+
+h2, h3 {
+    text-align: center;
+    color: #fff;
+}
+
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffffdd;
+    color: #000;
+    font-size: 16px;
+}
+
+    input[readonly] {
+        background-color: #f0f0f0;
+    }
+
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: hsl(0, 100%, 63%);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+    button:hover {
+        background-color: #e91e63;
+    }
+
+
+.error {
+    color: red;
+    text-align: center;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffffdd;
+    color: #8B0000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #6200ea;
+    color: #fff;
+}
